@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaż paneli podłogowych</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+    
+    <menu>
+        <a href="index.html">Strona Główna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </menu>
+
+    <main>
+        <h1>Kalkulator kosztów montażu</h1>
+        <label for="szerokosc">Szerokość pomieszczenia [m]: </label>
+        <input type="text" name="szerokosc" id="szerokosc">
+        <label for="dlugosc">Długość pomieszczenia [m]: </label>
+        <input type="text" name="dlugosc" id="dlugosc">
+        <p>Typ panelu</p>
+        <input type="radio" name="typ" value="laminowane">
+        <label for="laminowane">Panele laminowane</label><br>
+        <input type="radio" name="typ" value="winylowe">
+        <label for="winylowe">Panele winylowe</label><br>
+        <input type="radio" name="typ" value="deska">
+        <label for="deska">Deska podłogowa</label><br>
+        <button type="button" onclick="oblicz()">Oblicz</button>
+        <p id="efektskryptu"></p>
+    </main>
+
+    <footer>
+        <h5>Autor strony: Autor strony</h5>
+    </footer>
+
+    <script>
+        function oblicz() {
+            var szerokosc = document.getElementById("szerokosc").value;
+            var dlugosc = document.getElementById("dlugosc").value;
+            var typ = document.querySelector('input[name="typ"]:checked')?.value;
+            if(szerokosc && dlugosc){
+                var pole = szerokosc * dlugosc;
+                if (typ === "laminowane") {
+                    var cena = pole * 12;
+                    document.getElementById("efektskryptu").innerHTML=`Pole powierzchni pomieszczenia: ${pole}, koszt montażu ${cena}`;
+                }
+                if (typ === "winylowe") {
+                    var cena = pole * 14;
+                    document.getElementById("efektskryptu").innerHTML=`Pole powierzchni pomieszczenia: ${pole}, koszt montażu ${cena}`;
+                }   
+                if (typ === "deska") {
+                    var cena = pole * 18;
+                    document.getElementById("efektskryptu").innerHTML=`Pole powierzchni pomieszczenia: ${pole}, koszt montażu ${cena}`;
+                }
+            } else {
+                document.getElementById("efektskryptu").innerHTML="Wprowadź poprawne dane.";
+            }
+        }
+
+        
+
+
+    </script>
+</body>
+</html>
