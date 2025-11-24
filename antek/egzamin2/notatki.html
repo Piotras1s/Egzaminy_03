@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planer zadań</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside class="blok_boczny">
+        <img src="obraz.jpg" alt="notatki">
+    </aside>
+    <header class="naglowek">
+        <h2>Moje zadania</h2>
+    </header>
+    <nav class="blok_nawigacyjny">
+        <input type="text" value="Dodaj zadanie..." id="Dodaj">
+        <input type="button" value="Dodaj">
+    </nav>
+    <main class="main">
+        <h2>Lista zadań</h2>
+  <ul id="lista-zadan">
+    <li>Wpis 1 <button onclick="oznaczJakoWykonane(this)">Wykonane</button></li>
+    <li>Wpis 2 <button onclick="oznaczJakoWykonane(this)">Wykonane</button></li>
+    <li>Wpis 3 <button onclick="oznaczJakoWykonane(this)">Wykonane</button></li>
+    <li>Wpis 4 <button onclick="oznaczJakoWykonane(this)">Wykonane</button></li>
+    <li>Wpis 5 <button onclick="oznaczJakoWykonane(this)">Wykonane</button></li>
+    <li>Wpis 6 <button onclick="oznaczJakoWykonane(this)">Wykonane</button></li>
+  </ul>
+
+  <script>
+    function oznaczJakoWykonane(btn) {
+      const li = btn.parentElement;
+      li.classList.add('done');
+      btn.disabled = true; 
+    }
+  </script>
+    </main>
+    <footer class="stopka">
+        <h3>Notatki: 00000000000</h3>
+    </footer>
+</body>
+</html>

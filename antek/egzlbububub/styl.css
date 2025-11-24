@@ -1,0 +1,60 @@
+* {
+    font-family: century gothic, verdana;
+}
+body{
+    background-color: #F0EAE2;
+}
+
+#main{
+    
+    display: flex;
+    
+}
+
+
+
+
+header, footer{
+    background-image: url(cegła.jpg);
+    color: white;
+    height: 60px;
+    text-align: center;
+} 
+nav{
+    background-color: #824555;
+    width: 80%;
+    height: 60px;
+    
+}
+aside{
+    width: 20%;
+    height: 560px;
+    text-align: right;
+    overflow: hidden;
+    float: right;
+    
+}
+aside img{
+    width: 100%;
+}
+#lewy, #srodkowy{
+    width: 40%;
+    height: 500px;
+    overflow: auto;
+    
+    
+    
+    
+}
+h2{
+    text-align: center;
+}
+a {
+    color: #F0EAE2;
+    padding-left: 100px;
+    font-size: 180%;
+}
+a:hover{
+    color: white;
+}
+

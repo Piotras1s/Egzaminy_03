@@ -1,0 +1,7 @@
+kw1 - SELECT nazwa, rzeka, stanAlarmowy FROM wodowskazy;
+
+kw2 - SELECT wodowskazy.nazwa, wodowskazy.rzeka, wodowskazy.stanOstrzegawczy, wodowskazy.stanAlarmowy, pomiary.stanWody from wodowskazy JOIN pomiary ON wodowskazy.id=pomiary.wodowskazy_id where dataPomiaru = '2022-05-05';
+
+kw3 - SELECT wodowskazy.nazwa, wodowskazy.rzeka, wodowskazy.stanOstrzegawczy, wodowskazy.stanAlarmowy, pomiary.stanWody from wodowskazy JOIN pomiary ON wodowskazy.id=pomiary.wodowskazy_id where dataPomiaru = '2022-05-05' AND pomiary.stanWody>wodowskazy.stanOstrzegawczy;
+
+kw4 - SELECT dataPomiaru, AVG(stanWody) FROM pomiary GROUP BY dataPomiaru;
