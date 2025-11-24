@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komputery</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="animacja.gif" alt="Pogotowie komputerowe">
+    </header>
+    <menu>
+        <a href="index.html">Strona Główna</a>
+        <a href="kontakt.html">Kontakt</a>
+    </menu>
+    <main>
+        <section id="main1">
+
+        </section>
+        <section id="main2">
+            <h2>Kontakt</h2>
+            <table>
+                <tr>
+                    <td>Imię:</td>
+                    <td><input type="text" id="imie"></td>
+                </tr>
+                <tr>
+                    <td>Nazwisko</td>
+                    <td><input type="text" id="nazwisko"></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td><input type="email" name="" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Zgłoszenie</td>
+                    <td><select name="" id="usluga">
+                            <option value="naprawa komputerów">naprawa komputerów</option>
+                            <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+                            <option value="wirusy">wirusy</option>
+                            <option value="konfiguracja LAN">konfiguracja LAN</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="" id="" value="Wyślij kopię wiadomości" checked>Wyślij kopię wiadomości</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="reset">Czyść</button>
+                        <button type="submit" onclick="skrypt()">Wyślij</button>
+                    </td>
+                </tr>
+            </table>
+            </ul>
+            <hr>
+            <div id="wynik"></div>
+            <script>
+                function skrypt() {
+                    var imie = document.getElementById("imie").value; 
+                    var nazwisko = document.getElementById("nazwisko").value;
+                    var email = document.getElementById("email").value;
+                    var usluga = document.getElementById("usluga").value;
+                    document.getElementById("wynik").innerHTML =
+                    imie + " " + nazwisko + "<br>" +
+                    email + "<br>" +
+                    "Usługa: " + usluga;
+                }
+            </script>
+        </section>
+        <section id="main3">
+
+        </section>
+    </main>
+    <footer>
+        Autor: <i>Skibidi rizzler</i>
+    </footer>
+</body>
+
+</html>

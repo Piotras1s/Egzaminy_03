@@ -1,0 +1,44 @@
+*{
+    font-family: Georgia;
+}
+header, footer{
+background-color: #1b5e20;
+color: white;
+text-align: center;
+padding: 5px;
+}
+article{
+    background-image: url(obraz1.jpg);
+    color: DimGray;
+    font-size: 150%;
+    height: 350px;
+    overflow: auto;
+}
+#pierwsza, #druga, #trzecia{
+    background-color: #00e676;
+    color: #1b5e20;
+    width: 28%;
+    height: 560px;
+    margin: 2%;
+    border-radius: 10px;
+    box-shadow: 8px 8px 6px dimgray;
+}
+#pierwsza:hover, #druga:hover, #trzecia:hover{
+    background-color: #10ef84;
+}
+p:hover{
+    color: black;
+}
+h2, h3{
+    color: #1b5e20;
+    text-align: center;
+    letter-spacing: 3px;
+    padding-top: 20px;
+}
+ul{
+    list-style-image: url(obraz3.png);
+}
+main{
+    display: flex;
+}
+    

@@ -1,0 +1,11 @@
+KW1
+SELECT pseudonim FROM `zawodnicy` WHERE data_zdobycia LIKE "2020-07-%";
+
+KW2
+SELECT pseudonim, tytul FROM `zawodnicy` WHERE klasa= "3A" AND tytul <> "";
+
+KW3
+SELECT pseudonim, klasa, ranking FROM `zawodnicy` ORDER BY ranking ASC LIMIT 10;
+
+KW4
+SELECT pseudonim, data_zdobycia, DATEDIFF(CURDATE(), data_zdobycia) AS "dni" FROM `zawodnicy` WHERE tytul <> "";
