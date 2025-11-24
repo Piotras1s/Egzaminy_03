@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Efekty obrazu</title>
+</head>
+
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+
+    <section id="s1"><img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" class="zdj1" id="zdj1"><br>
+        Blur<input type="radio" name="efekt" id="efekt" value="1"><br>
+        sepia<input type="radio" name="efekt" id="efekt" value="2"><br>
+        negatyw<input type="radio" name="efekt" id="efekt" value="3"><br>
+        <button onclick="obraz1()">zastosuj</button>
+    </section>
+    <section id="s2">
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="zdj2"><br>
+        <button onclick="normalny()">Kolorowy</button>
+        <button onclick="czarnobialy()">Czarno-biały</button>
+    </section>
+    <section id="s3">
+        <img src="owoce.jpg" alt="Kosz pełen owoców" id="zdj3"><br>
+        <input type="range" name="" id="przezroczystosc" min="0" max="100" value="100"><br>
+        <button onclick="zmiana3()">zastosuj</button>
+    </section>
+    <section id="s4"><img src="zolw.jpg" alt="Żółw w wodzie" id="zdj4"><br>
+        <input type="range" name="" id="jasnosc" min="0" max="250"><br>
+        <button onclick="zmiana4()">zastosuj</button>
+    </section>
+
+    <footer>
+        <p><a href="http://www.css.com" target="_blank" rel="noopener noreferrer">Zobacz inne efekty
+                obrazu</a></p>
+        <p>Autor: Jan Kowalski</p>
+    </footer>
+    <script>
+        function obraz1() {
+            var zmienna1 = document.querySelector('input[name="efekt"]:checked');
+            var obraz1 = document.getElementById("zdj1");
+            switch (Number(zmienna1.value)) {
+                case 1:
+                    obraz1.style.filter = "blur(5px)";
+                    break;
+                case 2:
+                    obraz1.style.filter = "sepia(100%)";
+                    break;
+                case 3:
+                    obraz1.style.filter = "invert(100%)";
+                    break;
+            }
+        }
+        var obraz2 = document.getElementById("zdj2");
+        var obraz3 = document.getElementById("zdj3");
+        var obraz4 = document.getElementById("zdj4");
+        function czarnobialy() {
+            obraz2.style.filter = "grayscale(100%)";
+        }
+        function normalny() {
+            obraz2.style.filter = "none";
+        }
+        function zmiana3() {
+            var przezroczystosc = document.getElementById("przezroczystosc").value;
+            obraz3.style.opacity = przezroczystosc / 100;
+        }
+        function zmiana4() {
+            var jasnosc = document.getElementById("jasnosc").value;
+            obraz4.style.filter = "brightness(" + jasnosc + "%)";
+        }
+    </script>
+</body>
+
+</html>

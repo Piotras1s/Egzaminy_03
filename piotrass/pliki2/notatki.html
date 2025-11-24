@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Planer Zadań</title>
+</head>
+
+<body>
+    <section id="boczny">
+        <img src="obraz.jpg" alt="notatki">
+    </section>
+    <section id="prawy">
+        <header>
+            <h2>moje zadania</h2>
+        </header>
+        <nav><input type="text" placeholder="dodaj zadanie"><button type="submit" onclick="skrypt1()">Dodaj</button>
+        </nav>
+        <main>
+            <ul>
+                <li>Wyprowadzić psa<button type="button" onclick="zaznaczwykonane(this)">Wykonane</button></li>
+                <li>Gimnastyka<button type="button" onclick="zaznaczwykonane(this)">Wykonane</button></li>
+                <li>Zakupy<button type="button" onclick="zaznaczwykonane(this)">Wykonane</button></li>
+                <li>Spacer z kumplem<button type="button" onclick="zaznaczwykonane(this)">Wykonane</button></li>
+                <li>Odrabianie lekcji z młodszą siostrą<button type="button" onclick="zaznaczwykonane(this)">Wykonane</button></li>
+                <li>Projekt na geografie<button type="button" onclick="zaznaczwykonane(this)">Wykonane</button></li>
+            </ul>
+        </main>
+        <script>
+            function zaznaczwykonane(clickedbutton) {
+                let elementlisty = clickedbutton.parentElement
+                elementlisty.style.textDecoration = "line-through"
+            }
+            function dodajzadanie() {
+                let lista=document.querySelector("ul")
+                let zadanie=document.querySelector("input")
+                let nowyelementlisty=document.createElement("li")
+                nowyelementlisty.innerText=`${zadanie.value}<button> type="button" onclick="zaznaczwykonane(this)">Wykonane</button>`
+                lista.appendChild(nowyelementlisty)
+            }
+        </script>
+        <footer>
+            <h3>notatki:432863246</h3>
+        </footer>
+    </section>
+</body>
+
+</html>

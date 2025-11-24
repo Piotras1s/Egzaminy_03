@@ -1,0 +1,44 @@
+*{
+    font-family: 'Helvetica';
+}
+header, footer{
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 7px;
+}
+section#lmenu{
+    background-color: peru;
+    width: 80%;
+    height: 40px;
+    padding-top: 20px;
+}
+section#lglowny{
+    width: 80%;
+    height: 700px;
+    font-size: 120%;
+    overflow: auto;
+}
+section#prawy{
+    background-color: peru;
+    color: white;
+    width: 20%;
+    height: 760px;
+    float: left;
+}
+a{
+    color: #ddd;
+    padding-left: 90px;
+    font-size: 140%;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+img{
+    margin: 30px;
+    float: left;
+}
+main{
+    display: inline-block;
+}
