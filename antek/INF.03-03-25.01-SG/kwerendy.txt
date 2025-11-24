@@ -1,0 +1,11 @@
+kw1
+SELECT data FROM imieniny WHERE imiona LIKE "%Karola%";
+
+kw2
+SELECT imiona FROM `imieniny` WHERE data="04-05";
+
+kw3
+SELECT COUNT(data) as "ilosc dat" FROM `imieniny` WHERE imiona LIKE "%mir%";
+
+kw4
+ALTER TABLE imieniny ADD zyczenia varchar(500);
