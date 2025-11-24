@@ -1,0 +1,14 @@
+kw1
+SELECT miejsce, liczbaDni FROM `wycieczki` WHERE cena<1000;
+
+kw2
+SELECT liczbaDni, AVG(cena) AS 'sredniaCena' FROM `wycieczki` GROUP BY liczbaDni;
+
+kw3
+SELECT wycieczki.miejsce, zdjecia.nazwa FROM `wycieczki`
+JOIN zdjecia
+WHERE wycieczki.cena>500
+AND wycieczki.id=zdjecia.Wycieczki_id;
+
+kw4
+CREATE USER Ewa @localhost identified by 'Ewa!Ewa';

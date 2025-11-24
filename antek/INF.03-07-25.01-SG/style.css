@@ -1,0 +1,51 @@
+*{
+    font-family: Helvetica;
+}
+
+body{
+    background-color: lightsalmon;
+    text-align: center;
+}
+
+#lewy1{
+    width: 30%;
+    height: 400px;
+}
+
+#lewy2{
+    background-color: darksalmon;
+    width: 30%;
+    height: 100px;
+}
+
+#prawy{
+    background-color: darksalmon;
+    width: 70%;
+    height: 500px;
+    overflow: auto;
+    float: right;
+}
+
+img{
+    width: 100%;
+}
+
+#skrypt{
+    font-size: 200%;
+    font-style: italic;
+    padding: 10px;
+}
+
+#skrypt:hover{
+    color: ghostwhite;
+}
+
+table, td{
+    border: 1px dotted maroon;
+}
+
+table{
+    width: 70%;
+    margin: auto;
+}
+

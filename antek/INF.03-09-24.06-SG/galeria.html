@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+
+    <main>
+    <section id="lewy">
+        <button type="button" onclick="poprzedni()"> &lt; </button>
+    </section>
+    <section id="srodkowy">
+        <img src="1.jpg" alt="Aktywne zdjęcie" id="zdjecie">
+    </section>
+    <section id="prawy">
+        <button type="button" onclick="nastepny()"> &gt; </button>
+    </section>
+    </main>
+
+    <section id="miniatury">
+        <img src="1.jpg" alt="Gdańsk">
+        <img src="2.jpg" alt="Kraków">
+        <img src="3.jpg" alt="Niedzica">
+        <img src="4.jpg" alt="Pieniny">
+        <img src="5.jpg" alt="Szklarska Poręba">
+        <img src="6.jpg" alt="Tatry">
+        <img src="7.jpg" alt="Wrocław">
+    </section>
+
+    <footer>
+        <h3>Autorem galerii jest: </h3>
+        <p>skibidi bomba</p>
+        <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
+    </footer>
+    <script>
+        var aktualneZdjecie = 1;
+        var liczbaZdjec = 7;
+        var zdjecieGlowne = document.getElementById("zdjecie");
+
+        function nastepny() {
+            if (aktualneZdjecie < liczbaZdjec) {
+                aktualneZdjecie++;
+            } else {
+                aktualneZdjecie = 1;
+            }
+            zmienZdjecie();
+        }
+
+        function poprzedni() {
+            if (aktualneZdjecie > 1) {
+                aktualneZdjecie--;
+            } else {
+                aktualneZdjecie = liczbaZdjec;
+            }
+            zmienZdjecie();
+        }
+
+        function zmienZdjecie() {
+            zdjecieGlowne.setAttribute("src", aktualneZdjecie + ".jpg");
+        }
+    </script>
+</body>
+</html>
+
