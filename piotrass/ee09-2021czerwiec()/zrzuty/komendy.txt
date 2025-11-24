@@ -1,0 +1,18 @@
+SELECT imie, nazwisko, opis FROM osoby 
+WHERE Hobby_id = 1 OR Hobby_id = 2 OR Hobby_id = 6;
+
+SELECT osoby.id, osoby.nazwisko, hobby.nazwa FROM osoby 
+JOIN hobby ON hobby.id = osoby.id 
+WHERE osoby.rok_urodzenia > 2000;
+
+SELECT id, zdjecie FROM osoby 
+WHERE imie = 'monika' LIMIT 5;
+
+CREATE TABLE wpisy(
+id int NOT null AUTO_INCREMENT PRIMARY KEY,
+wpis text,
+uzytkownik_id int NOT null);
+
+
+INSERT INTO `osoby` (`Hobby_id`, `imie`, `nazwisko`, `rok_urodzenia`, `opis`, `zdjecie`) 
+VALUES (2, 'Adam', 'Nowak', 1985, 'Uwielbiam grać w piłkę nożną', 'adam_nowak.jpg');

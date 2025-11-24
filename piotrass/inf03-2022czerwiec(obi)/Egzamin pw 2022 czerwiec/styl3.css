@@ -1,0 +1,51 @@
+*{
+    font-family: Verdana;
+}
+.nlewy{
+background-color: seagreen;
+color: white;
+line-height: 150px;
+height: 260px;
+font-size: 160%;
+width: 75%;
+}
+.nprawy{
+background-color: seagreen;
+color: white;
+line-height: 150px;
+height: 260px;
+font-size: 160%;
+width: 25%;
+text-align: right;
+}
+section{
+    background-color: mintcream;
+    padding: 8%;
+
+}
+.fprawy{
+    background-color: seagreen;
+    color:  white;
+    width: 50%;
+    height: 70px;
+    text-align: center;
+}
+.flewy{
+    background-color: seagreen;
+    color:  white;
+    width: 50%;
+    height: 70px;
+    text-align: center;
+}
+img{
+    box-shadow: ;
+   
+}
+a{
+    text-underline-offset: none;
+    background-color: mintcream;
+    b
+}
+footer{
+    flex: inline-block;
+}

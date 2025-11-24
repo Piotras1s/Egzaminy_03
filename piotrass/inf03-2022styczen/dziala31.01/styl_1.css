@@ -1,0 +1,46 @@
+*{
+    background-color: #F6E5DC;
+    font-family: Verdana;
+}
+header{
+    background-color: #2F180C;
+    text-align: center;
+    color: khaki;
+    height: 60px;
+}
+main{
+    display: inline-flex;
+}
+main .prawy{
+    font-size: 150%;
+    padding: 70px;
+    width: 40%;
+}  
+main .lewy{
+    width: 60%;
+}
+.formularz{
+    background-color: #D0B6A8;
+    text-align: center;
+    padding: 30px;
+}
+footer{
+    background-color: #2F180C;
+    color: khaki;
+    height: 60px;
+}
+img{
+    height: 350px;
+}
+button{
+    margin: 5px;
+    padding: 10px;
+    background-color: #2F180C;
+    color: khaki;
+}
+h1{
+    background-color: #2F180C;
+}
+h2{
+    background-color: #D0B6A8;
+}

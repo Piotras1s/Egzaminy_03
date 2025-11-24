@@ -1,0 +1,60 @@
+*{
+    font-family: Georgia;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #005B4F;
+    color: white;
+    font-size: 50%;
+    height: 20px;
+    text-align: center;
+}
+main {
+    background-color: #E1E2E1;
+    height: 400px;
+    padding: 20px;
+    overflow: scroll;
+}
+.blok-zdjecie {
+    display: inline-block;
+    width: 20%;
+}
+.blok-zdjecie img {
+    border-radius: 100%;
+    padding: 20px; 
+}
+.blok-opis {
+    display: inline-block;
+    width: 75%;
+    vertical-align: top;
+}
+.blok-opis h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+.blok-linia{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 20px; 
+}
+footer {
+    display: flex;
+    background-color: #005B4F;
+    color: white;
+    justify-content: space-between;
+}
+footer .stopka{
+    width: 50%;
+    height: 20px;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    background-color: #00897B;
+}
+a {
+    color: white;
+}
